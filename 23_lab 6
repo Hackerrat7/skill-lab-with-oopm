@@ -1,0 +1,33 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+// Base class
+class Student {
+  public: 
+    string college = "DBIT";
+    void address() {
+      cout << "KURLA! \n" ;
+    }
+};
+
+// Derived class
+class extcStudent: public Student {
+  public: 
+    string dept = "EXTC";
+};
+
+/*class compStudent: public Student{
+	public:
+		string dept = "COMPS";
+};*/
+
+int main() {
+  extcStudent s1;
+  //compStudent s2;
+  s1.address();
+  //s2.address();
+  cout << s1.dept << " " << s1.college<<"\n";
+  //cout << s2.dept << " " << s2.college;
+  return 0;
+}
